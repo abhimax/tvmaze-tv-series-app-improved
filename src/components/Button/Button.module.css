@@ -1,0 +1,7 @@
+@import '../../styles/variables.css';
+.button{
+ background-color: var(--color-primary);
+ display: flex;
+ width: fit-content;
+ padding: 0.4rem;
+}
