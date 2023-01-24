@@ -5,12 +5,15 @@ import classes from "./HomePage.module.css";
 import { Col, Container, Row } from "react-grid-system";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { showAction } from "../../store/showSlice";
 
 
 function HomePage (){
     const [shows, setShows] = useState([]);
     const [isLoading, setLoading] = useState(false);
     const [httpError, setHttpError] = useState();
+    const dispatch = useDispatch();
 
    const navigate = useNavigate();
 
@@ -23,6 +26,7 @@ function HomePage (){
     const showData = await response.json();
     setShows(showData);
     setLoading(false);
+    dispatch(showAction.fetchShows({searchedShows: showData}));
   }
     const handleSearch = () => {
         //TODO search
@@ -30,6 +34,7 @@ function HomePage (){
             setLoading(false);
             setHttpError(error.message);
           });
+          navigate('/search');
         }
 
     return(
