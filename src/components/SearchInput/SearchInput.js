@@ -4,7 +4,7 @@ const SearchInput = ({id, label, ...props}) => {
   return (
     <div className={classes.input}>
       <input {...props} />
-      <Button label="search"/>
+      <Button label="Search"/>
     </div>
   );
 };

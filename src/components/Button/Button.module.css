@@ -1,7 +1,23 @@
-@import '../../styles/variables.css';
+@import '../../assets/styles/variables.css';
 .button{
- background-color: var(--color-primary);
  display: flex;
  width: fit-content;
- padding: 0.4rem;
+ padding: 0.875rem 1.875rem;
+ align-items: center;
+ color: var(--white);
+ cursor: pointer;
+ height: 50px;
+ box-sizing: border-box;
+}
+.content-wrapper{
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-button);
+}
+.button.secondary{
+    background-color:rgba(0, 0, 0, .4)
+}
+
+.primary{
+    background-color: var(--color-primary);
 }

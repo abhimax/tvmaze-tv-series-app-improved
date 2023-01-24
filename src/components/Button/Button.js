@@ -1,10 +1,20 @@
 import classes from "./Button.module.css";
-const Button = ({ label, icon, onClick }) => {
+import PropTypes from 'prop-types';
+const Button = ({ label, icon, darkMode, onClick }) => {
   return (
-    <div class={classes.button} onClick={onClick}>
-      <label>{icon}{label}</label>
+    <div className={`${classes.button} ${ darkMode ? classes.secondary : classes.primary}`} onClick={onClick}>
+      <label className={classes['content-wrapper']}>{icon}{label}</label>
     </div>
   );
 };
-
+Button.propTypes ={
+    label: PropTypes.string,
+    icon: PropTypes.element,
+    darkMode: PropTypes.bool,
+    onClick: PropTypes.func,
+}
+Button.defaultProps = {
+    label: '',
+    darkMode: false,
+}
 export default Button;

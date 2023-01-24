@@ -1,0 +1,22 @@
+:root {
+    /* Colors */
+    --black: #000000;
+    --white: #ffffff;
+    --tyrolite-blue-green-: #00A496;
+    --berie-black: #1C1C1C;
+
+    /* Theme variables*/
+    --color-primary: var(--tyrolite-blue-green-);
+    --color-secondary: var(--berie-black);
+    --font-size-button: 1.25rem;
+
+    /* Fonts*/
+    --font-size-base: 1rem;
+    --font-size-medium: 1.938rem;
+    --font-size-large: 2.438rem;
+
+    --font-weight-base: 400;
+    --font-weight-bold: 700;
+
+}
+

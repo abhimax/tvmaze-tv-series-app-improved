@@ -3,16 +3,31 @@
     align-items: center;
     width: 100%;
     background-color: var(--white);
-  }
-  
-  .input label {
-    font-weight: bold;
-    margin-right: 1rem;
+    box-sizing: border-box;
+    height: fit-content;
+    height: 62px;
+    padding: 6px 6px 6px 18px;
+
   }
   
   .input input {
+    display: flex;
+    flex: 1 1 100%;
+    border: none;
+    font-size: 1.25rem;
+    line-height: 23px;
+    padding-left: 0.1.125rem;
+  }
+  .input input:hover,.input input:active,.input input:focus-visible {
+    border: none;
+    outline: none;
+  }
+  
+  /* .input input {
     border-radius: 5px;
     font: inherit;
     padding-left: 0.5rem;
-  }
+    font-size: 20px;
+    line-height: 23px;
+  } */
   
