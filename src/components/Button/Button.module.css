@@ -8,7 +8,9 @@
  cursor: pointer;
  height: 50px;
  box-sizing: border-box;
+ cursor: pointer;
 }
+
 .content-wrapper{
     display: flex;
     align-items: center;
