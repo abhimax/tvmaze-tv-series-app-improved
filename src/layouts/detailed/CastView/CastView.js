@@ -9,7 +9,7 @@ const CastView = ({ actorList }) => {
         {actorList &&
           actorList.map((actor, index) => {
             return (
-              <Col md={6} xs={6} align="center" debug>
+              <Col md={6} xs={6} align="center" key={index}>
                 <ActorCard
                   key={actor.index}
                   name={actor.name}

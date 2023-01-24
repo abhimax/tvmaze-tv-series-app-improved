@@ -69,7 +69,7 @@ const listData = [
   {
     score: 0.90598404,
     show: {
-      id: 139,
+      id: 130,
       url: "https://www.tvmaze.com/shows/139/girls",
       name: "Test 234",
       type: "Scripted",
@@ -128,7 +128,7 @@ const listData = [
   {
     score: 0.90598404,
     show: {
-      id: 139,
+      id: 149,
       url: "https://www.tvmaze.com/shows/139/girls",
       name: "Girls 234",
       type: "Scripted",
@@ -187,7 +187,7 @@ const listData = [
   {
     score: 0.90598404,
     show: {
-      id: 139,
+      id: 159,
       url: "https://www.tvmaze.com/shows/139/girls",
       name: "Girls Blaa",
       type: "Scripted",
@@ -246,7 +246,7 @@ const listData = [
   {
     score: 0.90598404,
     show: {
-      id: 139,
+      id: 119,
       url: "https://www.tvmaze.com/shows/139/girls",
       name: "Girls",
       type: "Scripted",
@@ -308,13 +308,13 @@ function DetailedPage() {
     <div className={classes["search-container"]}>
       <Container>
         <Row justify="center" align="center" >
-          <Col  sm={10} md={10}  xxl={8} align="center" debug >
+          <Col  sm={10} md={10}  xxl={8} align="center">
             <AppHeader />
           </Col>
-          <Col sm={10} md={10} xxl={8} align="center" debug>
-            <Button label={"Back to search Results"} icon={<Back />} darkMode />
+          <Col sm={10} md={10} xxl={8} align="center" className={classes['back-to-search-wrapper']}>
+            <Button label={"  Back to search Results"} icon={<Back size={20} />} darkMode fitContent />
           </Col>
-          <Col  sm={10}  md={10}  xxl={8} align="center" className={classes["search-list-column"]} debug>
+          <Col  sm={10}  md={10}  xxl={8} align="center" className={classes["search-list-column"]}>
             <DetailedMainView name={listData[0].show.name} rating={listData[0].show.rating} genres={listData[0].show.genres} summary={listData[0].show.summary} imagePath={listData[0].show.image.original} actorList={[{name: "Jennifer Aniston", character: "Rachel Green", image:"https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg"},{name: "Matthew", character: "Chandler", image:"https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg"}]}/>
           </Col>
         </Row>

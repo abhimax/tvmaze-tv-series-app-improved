@@ -1,9 +1,8 @@
 import { StarRating } from "../../../components/StarRating";
 import classes from "./ShowCard.module.css";
-const ShowCard = ({ name, rating, image }) => {
-  console.log('>>>>>',rating);
+const ShowCard = ({ name, rating, image, onCardClick, id }) => {
   return (
-    <div className={classes["show-card-wrapper"]}>
+    <div className={classes["show-card-wrapper"]} id={id} onClick={onCardClick}>
       <div
         className={classes["show-card-image"]}
         style={{ backgroundImage: `url(${image})` }}

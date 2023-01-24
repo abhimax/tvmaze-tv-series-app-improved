@@ -1,13 +1,9 @@
-import { Button } from './components/Button';
-import { SearchInput } from './components/SearchInput';
+import { DetailedPage } from './pages/Detailed';
+import HomePage from './pages/Home/HomePage';
+import SearchPage from './pages/Search/SearchPage';
 
 function App() {
-  return (
-    <div className="App">
-      <Button label={'Search'} icon="<"/>
-      <SearchInput placeholder="Search for TV shows"/>
-    </div>
-  );
+  return ( <div className="App"><HomePage/></div>);
 }
 
 export default App;

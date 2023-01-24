@@ -7,15 +7,15 @@ const DetailedMainView = ({ name, rating, genres, summary, imagePath, actorList 
   return (
     <div className={classes["detailed-layout"]}>
         <Row >
-          <Col  md={3}   debug >
+          <Col  md={3}>
           <img src={imagePath} className="App-logo" alt="logo" />
           </Col>
-          <Col md={9}  align="center" debug>
+          <Col md={9}  align="center">
           <Row justify="center" align="center" >
-             <Col md={12}  align="center" debug>
+             <Col md={12}  align="center">
                 <DescriptionView name={name} rating={rating} genres={genres} summary={summary}/>
              </Col>
-             <Col md={12}  align="center" debug>
+             <Col md={12}  align="center">
                 <CastView actorList={actorList}/>
             </Col>
           </Row>

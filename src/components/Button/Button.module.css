@@ -16,10 +16,16 @@
     align-items: center;
     font-size: var(--font-size-button);
 }
+.content-wrapper svg{
+    margin-right: 1rem;
+}
 .button.secondary{
     background-color:rgba(0, 0, 0, .4)
 }
 
 .primary{
     background-color: var(--color-primary);
+}
+.full{
+    width: unset;
 }
