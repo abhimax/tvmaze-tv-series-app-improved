@@ -1,0 +1,10 @@
+.description-wrapper {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .summary-wrapper p {
+    text-align: left;
+  }

@@ -1,0 +1,7 @@
+.detailed-layout {
+    padding: 1rem;
+    /* display: flex; */
+  }
+  .detailed-layout img{
+    width: -webkit-fill-available;
+  }
