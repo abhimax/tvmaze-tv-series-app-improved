@@ -24,6 +24,15 @@
 - Responsiveness could be improved more
 - definitely Test cases can be written. Unit test, structural test can be done. Specially the inbuilt test using react testing lib and jest can expand more. Also better to have an e2e test. but we need to make the above improvements before it.
 - Can add more CSS variables and add theme files and make the project more configurable. So that we can implement the theme easily with the help of the theme engine.
+- React storybooks can be integrated into this project and we can write stories (UI test cases) from atomic components to page levels. Furthermore it supports redux and react routes. so we can test screen flow and UI behaviour with state independently from the backend.
+To save time I didn't use react PropTypes for all components. It would be better if we use them since react with JavaScript is not giving errors in completion like TypeScript.
+- I used JavaScript Fetch API to fetch the data at the moment. It would be easier to handle if we use libraries like axios.
+- We can add the lazy loading feature to improve user experience speed up.
+- Also Next JS always comes with a strong way to overcome react limitation. So if I write this using the next JS we can improve SEO and speedup with the help of server side rendering.
+- Also I could have taken all hard coded strings into a single file and used them to reduce the duplication and make the app more configurable.
+- SASS with CSS variables is more flexible than CSS modules. I used the css module since in the description it mentioned that it is nice to have only CSS.
+- Also I noticed that in the mockup helvetica was the font that was used. It would be great to attach fonts with requirements since we can include them into the asset folder and use font-face as CSS variables.
+- Also It would be great if I use the React router to handle the data fetching part as well. So that we could reduce the usage of lifecycle hooks and use a clean approach to make it. To be honest I didn't have enough knowledge to do so. Thesedays, I'm playing around with them. 
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
