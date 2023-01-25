@@ -307,15 +307,52 @@ function DetailedPage() {
   return (
     <div className={classes["search-container"]}>
       <Container>
-        <Row justify="center" align="center" >
-          <Col  sm={10} md={10}  xxl={8} align="center">
+        <Row justify="center" align="center">
+          <Col sm={10} md={10} xxl={8} align="center">
             <AppHeader />
           </Col>
-          <Col sm={10} md={10} xxl={8} align="center" className={classes['back-to-search-wrapper']}>
-            <Button label={"  Back to search Results"} icon={<Back size={20} />} darkMode fitContent />
+          <Col
+            sm={10}
+            md={10}
+            xxl={8}
+            align="center"
+            className={classes["back-to-search-wrapper"]}
+          >
+            <Button
+              label={"  Back to search Results"}
+              icon={<Back size={20} />}
+              darkMode
+              fitContent
+            />
           </Col>
-          <Col  sm={10}  md={10}  xxl={8} align="center" className={classes["search-list-column"]}>
-            <DetailedMainView name={listData[0].show.name} rating={listData[0].show.rating} genres={listData[0].show.genres} summary={listData[0].show.summary} imagePath={listData[0].show.image.original} actorList={[{name: "Jennifer Aniston", character: "Rachel Green", image:"https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg"},{name: "Matthew", character: "Chandler", image:"https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg"}]}/>
+          <Col
+            sm={10}
+            md={10}
+            xxl={8}
+            align="center"
+            className={classes["search-list-column"]}
+          >
+            <DetailedMainView
+              name={listData[0].show.name}
+              rating={listData[0].show.rating}
+              genres={listData[0].show.genres}
+              summary={listData[0].show.summary}
+              imagePath={listData[0].show.image.original}
+              actorList={[
+                {
+                  name: "Jennifer Aniston",
+                  character: "Rachel Green",
+                  image:
+                    "https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg",
+                },
+                {
+                  name: "Matthew",
+                  character: "Chandler",
+                  image:
+                    "https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg",
+                },
+              ]}
+            />
           </Col>
         </Row>
       </Container>
