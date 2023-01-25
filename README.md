@@ -4,26 +4,26 @@
 ### React, JavaScript, CSS Modules, Fetch API, Redux, SVG
 
 ## What I have done
-### initialized the React app using npx create-react-app
-### Study figma mocks and developed and tested atomic components
-### composite components developments using atomic components
-### Layout developments
-### Pages  developments
-### Hard corded show list and test all UI and fix errors
-### Fixed responsive errors
-### Add react routs and test with dummy data to plan dynamic routs
-### add redux and replace dummy values with real data that fetched from DB
-### set search value based on the search input result
+- initialized the React app using npx create-react-app
+- Study figma mocks and developed and tested atomic components
+- composite components developments using atomic components
+- Layout developments
+- Pages  developments
+- Hard corded show list and test all UI and fix errors
+- Fixed responsive errors
+- Add react routs and test with dummy data to plan dynamic routs
+- add redux and replace dummy values with real data that fetched from DB
+- set search value based on the search input result
 
 ## What I Can improve if I have more time
-### This could be done using typeScript. But It takes considerable time compared to React. But It gives more future benefits.
-### currently show detailed page functions using dummy values. need to get data from API.
-### Error state can be handled. Also found some error triggered with null data from the server. Those fixes could be done.
-### Need to move data fetching and state management into a custom Hook. so that It will be easy to handle API in different modules.
-### There are some style improvements that need to be done. Within a short time It was difficult.
-### Responsiveness could be improved more
-### definitely Test cases can be written. Unit test, structural test can be done. Specially the inbuilt test using react testing lib and jest can expand more. Also better to have an e2e test. but we need to make the above improvements before it.
-### Can add more CSS variables and add theme files and make the project more configurable. So that we can implement the theme easily with the help of the theme engine.
+- This could be done using typeScript. But It takes considerable time compared to React. But It gives more future benefits.
+- currently show detailed page functions using dummy values. need to get data from API.
+- Error state can be handled. Also found some error triggered with null data from the server. Those fixes could be done.
+- Need to move data fetching and state management into a custom Hook. so that It will be easy to handle API in different modules.
+- There are some style improvements that need to be done. Within a short time It was difficult.
+- Responsiveness could be improved more
+- definitely Test cases can be written. Unit test, structural test can be done. Specially the inbuilt test using react testing lib and jest can expand more. Also better to have an e2e test. but we need to make the above improvements before it.
+- Can add more CSS variables and add theme files and make the project more configurable. So that we can implement the theme easily with the help of the theme engine.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
