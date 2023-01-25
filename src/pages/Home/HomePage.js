@@ -4,7 +4,7 @@ import classes from "./HomePage.module.css";
 
 import { Col, Container, Row } from "react-grid-system";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { showAction } from "../../store/showSlice";
 
@@ -14,12 +14,13 @@ function HomePage (){
     const [isLoading, setLoading] = useState(false);
     const [httpError, setHttpError] = useState();
     const dispatch = useDispatch();
+    const SearchInputRef = useRef();
 
    const navigate = useNavigate();
 
    const  getShowsData = async () => {
     setLoading(true);
-    const response = await fetch('https://api.tvmaze.com/search/shows?q=girls');
+    const response = await fetch(`https://api.tvmaze.com/search/shows?q=${SearchInputRef.current.value}`);
     if(!response.ok){
       throw new Error("Something went wrong!");
     }
@@ -30,10 +31,13 @@ function HomePage (){
   }
     const handleSearch = () => {
         //TODO search
+        //const searchInputValue = SearchInputRef.current.value;
         getShowsData().catch((error) => {
             setLoading(false);
             setHttpError(error.message);
           });
+          
+          //console.log('serchInputValue >>',searchInputValue);
           navigate('/search');
         }
 
@@ -46,7 +50,7 @@ function HomePage (){
             <Col sm={6}  style={{ marginTop: '20%'}} align="center">
             <div className={classes.home}>
             <img src={logo} className="App-logo" alt="logo" />
-            <SearchInput onSearchClick={handleSearch}/>
+            <SearchInput onSearchClick={handleSearch} inputRef={SearchInputRef}/>
         </div>
                 </Col>
 
