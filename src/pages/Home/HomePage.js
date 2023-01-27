@@ -56,7 +56,6 @@ function HomePage() {
           </Col>
         </Row>
       </Container>
-      {console.log("Show List", shows)}
     </div>
   );
 }

@@ -14,17 +14,8 @@ const showSlice = createSlice({
     },
     setSelectedShow(state, action) {
       const searchedShows = action.payload.searchedShows;
-      const selectedId = action.payload.id;
-      console.log('searchedShows >>>',searchedShows);
-      searchedShows.forEach(element => {
-        console.log('element.show.id', typeof element.show.id)
-        console.log('element.show.id', typeof selectedId)
-        // if(element.show.id.trim()===selectedId.trim()){
-        //   console.log('Matched!',element.show.id);
-        // }
-      });
-      state.selectedShow = searchedShows.find((item) => item.id === selectedId);
-      
+      const selectedId = action.payload.selectedId;
+      state.selectedShow = searchedShows.find((item) => item.show.id.toString() === selectedId);
     },
   },
 });

@@ -306,7 +306,7 @@ const listData = [
 ];
 function DetailedPage() {
   const selectedShow = useSelector(state => state.shows.selectedShow);
-  console.log('WOW',selectedShow);
+  
   return (
     <div className={classes["search-container"]}>
       <Container>

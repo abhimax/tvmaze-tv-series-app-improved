@@ -8,7 +8,6 @@ const ShowList = ({ list }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleShowCarClick = (e) => {
-    console.log('Show ID >>',e.currentTarget.id);
     dispatch(showAction.setSelectedShow({searchedShows: list, selectedId : e.currentTarget.id}));
    navigate('/detailed');
   }
