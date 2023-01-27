@@ -5,6 +5,7 @@ import { Button } from "../../components/Button";
 import Back from "../../components/Icon/Back";
 import { ShowList } from "../../layouts/showList";
 import { DetailedMainView } from "../../layouts/detailed";
+import { useSelector } from "react-redux";
 
 const listData = [
   {
@@ -304,6 +305,8 @@ const listData = [
   },
 ];
 function DetailedPage() {
+  const selectedShow = useSelector(state => state.shows.selectedShow);
+  console.log('WOW',selectedShow);
   return (
     <div className={classes["search-container"]}>
       <Container>
@@ -333,11 +336,11 @@ function DetailedPage() {
             className={classes["search-list-column"]}
           >
             <DetailedMainView
-              name={listData[0].show.name}
-              rating={listData[0].show.rating}
-              genres={listData[0].show.genres}
-              summary={listData[0].show.summary}
-              imagePath={listData[0].show.image.original}
+              name={selectedShow.show.name}
+              rating={selectedShow.show.rating}
+              genres={selectedShow.show.genres}
+              summary={selectedShow.show.summary}
+              imagePath={selectedShow.show.image.original}
               actorList={[
                 {
                   name: "Jennifer Aniston",
