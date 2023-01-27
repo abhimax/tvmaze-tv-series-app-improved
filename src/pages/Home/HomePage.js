@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { showAction } from "../../store/showSlice";
+import { Alert } from "../../components/Alert";
 
 function HomePage() {
   const [shows, setShows] = useState([]);
@@ -30,6 +31,11 @@ function HomePage() {
     dispatch(showAction.fetchShows({ searchedShows: showData }));
   };
   const handleSearch = () => {
+    if(SearchInputRef.current.value === ''){
+      setHttpError('Please Enter value to search shows...');
+      //TODO error message component.
+      return;
+    }
     //TODO search
     getShowsData().catch((error) => {
       setLoading(false);
@@ -41,7 +47,7 @@ function HomePage() {
   return (
     <div className={classes["home-container"]}>
       {isLoading && <p>Loading...</p>}
-      {httpError && httpError}
+      {httpError && <Alert message={httpError} type="error"/>}
       <Container>
         <Row justify="center" align="center">
           <Col sm={12} md={10} lg={8} xl={6} style={{ marginTop: "20%" }} align="center">

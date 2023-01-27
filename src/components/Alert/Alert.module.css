@@ -1,0 +1,40 @@
+.alert {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .error {
+    color: var(--color-white);
+    background-color:var(--color-error);
+  }
+  
+  .success {
+    color: var(--color-white);
+    background-color: var(--color-success);
+  }
+  
+  .warning {
+    color: var(--color-white);
+    color: var(--color-warning);
+  }
+  .info {
+    color: var(--color-white);
+    color: var(--color-info);
+  }
+  .closebtn {
+    margin-left: 15px;
+    color: var(--color-white);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: var(--color-black);
+  }
+  .hide {
+    display: none;
+  }

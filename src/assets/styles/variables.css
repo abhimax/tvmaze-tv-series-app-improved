@@ -5,12 +5,23 @@
     --tyrolite-blue-green: #00A496;
     --plumage-: #039a8d;
     --berie-black: #1C1C1C;
+    --herbal: #24A787;
+    --blue-eyed-boy: #1977C9;
+    --urobilin: #DDAF23;
+    --rufous: #A41D0C;
+
 
     /* Theme variables*/
     --color-primary: var(--tyrolite-blue-green);
     --color-primary-dark-1: var(--plumage);
     --color-secondary: var(--berie-black);
     --font-size-button: 1.25rem;
+    --color-success: var(--herbal);
+    --color-error: var(--rufous);
+    --color-warning: var(--urobilin);
+    --color-info: var(--blue-eyed-boy);
+    --color-white: var(--white);
+    --color-black: var(--black);
 
     /* Fonts*/
     --font-size-x-small: 0.65rem; /* 10.5px */
