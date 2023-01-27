@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 
 function SearchPage() {
   const searchedShows = useSelector((state) => state.shows.searchedShows);
+  console.log(searchedShows);
   return (
     <div className={classes["search-container"]}>
       <Container>

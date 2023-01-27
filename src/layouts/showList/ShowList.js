@@ -19,10 +19,10 @@ const ShowList = ({ list }) => {
             return (
               <Col md={3} xs={6} align="center" key={item.show.id}>
                 <ShowCard
-                  id={item.show.id}
-                  name={item.show.name}
-                  rating={item.show.rating}
-                  image={item.show.image.medium}
+                  id={item.show.id && item.show.id}
+                  name={item.show.name && item.show.name}
+                  rating={item.show.rating && item.show.rating}
+                  image={item.show.image && item.show.image.medium}
                   onCardClick={handleShowCarClick}
                 />
               </Col>
