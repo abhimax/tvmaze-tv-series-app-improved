@@ -44,12 +44,13 @@ function HomePage() {
       {httpError && httpError}
       <Container>
         <Row justify="center" align="center">
-          <Col sm={6} style={{ marginTop: "20%" }} align="center">
+          <Col sm={12} md={10} lg={8} xl={6} style={{ marginTop: "20%" }} align="center">
             <div className={classes.home}>
               <img src={logo} className="App-logo" alt="logo" />
               <SearchInput
                 onSearchClick={handleSearch}
                 inputRef={SearchInputRef}
+                placeholder="Search for TV shows"
               />
             </div>
           </Col>

@@ -8,7 +8,7 @@ const ShowCard = ({ name, rating, image, onCardClick, id }) => {
         style={{ backgroundImage: `url(${image})` }}
       ></div>
       <div className={classes["show-card-footer"]}>
-        <h3>{name}</h3>
+        <h4>{name}</h4>
         <StarRating rating={rating.average} />
       </div>
     </div>

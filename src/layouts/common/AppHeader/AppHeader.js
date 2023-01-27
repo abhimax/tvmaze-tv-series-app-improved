@@ -20,8 +20,8 @@ const AppHeader = () => {
         >
           <img src={logo} className="App-logo" alt="logo" />
         </Col>
-        <Col md={12} lg={8} xlg={9}>
-          <SearchInput
+        <Col md={12} lg={8} xlg={9} className={classes["input-holder"]}>
+          <SearchInput 
             placeholder="Search for TV shows"
             onSearchClick={handleSearch}
           />

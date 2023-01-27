@@ -1,4 +1,3 @@
 .show-list-layout {
-    padding: 1rem;
-    /* display: flex; */
+  padding: var(--padding-base);
   }

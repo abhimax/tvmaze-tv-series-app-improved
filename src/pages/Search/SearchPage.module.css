@@ -1,7 +1,13 @@
-.home-container img{
-    margin-bottom: 3rem;
+.home-container img {
+  margin-bottom: 3rem;
 }
-.search-list-column{
-    padding-left: 0 !important;
-    padding-right: 0 !important;;
+.search-list-column {
+  margin-top: 15px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+@media (max-width: 1024px) {
+  .search-list-column {
+    margin-top: 8px;
+  }
 }

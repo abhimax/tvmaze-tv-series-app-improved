@@ -1,7 +1,15 @@
 .detailed-layout {
-    padding: 1rem;
-    /* display: flex; */
+  padding: var(--padding-base);
   }
   .detailed-layout img{
     width: -webkit-fill-available;
+  }
+
+  @media (max-width: 1024px) {
+    .col-image{
+      order: 2;
+    }
+    .col-content{
+      order: 1;
+    }
   }

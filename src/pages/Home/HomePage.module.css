@@ -1,3 +1,9 @@
-.home-container img{
-    margin-bottom: 3rem;
+.home-container img {
+  margin-bottom: 75px;
+}
+
+@media (max-width: 768px) {
+  .home-container img {
+    margin-bottom: 83px;
+  }
 }
