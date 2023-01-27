@@ -1,12 +1,16 @@
 import { Col, Row } from "react-grid-system";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { showAction } from "../../store/showSlice";
 import { ShowCard } from "./ShowCard";
 import classes from "./ShowList.module.css";
 const ShowList = ({ list }) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleShowCarClick = (e) => {
     console.log('Show ID >>',e.currentTarget.id);
-    navigate('/detailed');
+    dispatch(showAction.setSelectedShow({searchedShows: list, selectedId : e.currentTarget.id}));
+   navigate('/detailed');
   }
   return (
     <div className={classes["show-list-layout"]}>
