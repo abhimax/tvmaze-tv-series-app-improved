@@ -3,14 +3,14 @@ import logo from "../../assets/images/tvmaze-logo.svg";
 import classes from "./HomePage.module.css";
 import { Col, Container, Row } from "react-grid-system";
 import { useNavigate } from "react-router-dom";
-import { useRef} from "react";
+import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { showAction } from "../../store/showSlice";
 import { Alert } from "../../components/Alert";
 import useHttp from "../../hooks/use-http";
+import { LoadingSpinner } from "../../components/LoadingSpinner";
 
 function HomePage() {
-
   const dispatch = useDispatch();
   const SearchInputRef = useRef();
   const navigate = useNavigate();
@@ -20,11 +20,7 @@ function HomePage() {
     navigate("/search");
   };
 
-  const {
-    isLoading,
-    error: httpError,
-    sendRequest: getShowsData,
-  } = useHttp();
+  const { isLoading, error: httpError, sendRequest: getShowsData } = useHttp();
 
   const handleSearch = () => {
     getShowsData(
@@ -35,23 +31,57 @@ function HomePage() {
     );
   };
 
+  const errorContent = (
+    <Row justify="center" align="center">
+      <Col
+        justify="center"
+        align="center"
+        className={classes["alert-wrapper"]}
+        sm={12}
+        md={10}
+        lg={8}
+        xl={6}
+      >
+        <Alert message={httpError} type="error" />
+      </Col>
+    </Row>
+  );
+
+  const loadingContent = (
+    <Row>
+      <Col md={12} align="center" className={classes["loader-wrapper"]}>
+        <LoadingSpinner />
+      </Col>
+    </Row>
+  );
+
+  const searchContent = (
+    <Row justify="center">
+      <Col
+        sm={12}
+        md={10}
+        lg={8}
+        xl={6}
+        style={{ marginTop: "20%" }}
+        align="center"
+      >
+        <div className={classes.home}>
+          <img src={logo} className="App-logo" alt="logo" />
+          <SearchInput
+            onSearchClick={handleSearch}
+            inputRef={SearchInputRef}
+            placeholder="Search for TV shows"
+          />
+        </div>
+      </Col>
+    </Row>
+  );
   return (
     <div className={classes["home-container"]}>
-      {isLoading && <p>Loading...</p>}
-      {httpError && <Alert message={httpError} type="error"/>}
       <Container>
-        <Row justify="center" align="center">
-          <Col sm={12} md={10} lg={8} xl={6} style={{ marginTop: "20%" }} align="center">
-            <div className={classes.home}>
-              <img src={logo} className="App-logo" alt="logo" />
-              <SearchInput
-                onSearchClick={handleSearch}
-                inputRef={SearchInputRef}
-                placeholder="Search for TV shows"
-              />
-            </div>
-          </Col>
-        </Row>
+        {httpError && errorContent}
+        {isLoading && loadingContent}
+        {!isLoading && searchContent}
       </Container>
     </div>
   );

@@ -2,6 +2,15 @@
   margin-bottom: 75px;
 }
 
+.loader-wrapper {
+  align-items: center;
+  margin-top: 30%;
+}
+.alert-wrapper {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 @media (max-width: 768px) {
   .home-container img {
     margin-bottom: 83px;
