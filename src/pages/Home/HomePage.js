@@ -23,6 +23,9 @@ function HomePage() {
   const { isLoading, error: httpError, sendRequest: getShowsData } = useHttp();
 
   const handleSearch = () => {
+    if(SearchInputRef.current.value === ''){
+      return;
+    }
     getShowsData(
       {
         url: `https://api.tvmaze.com/search/shows?q=${SearchInputRef.current.value}`,

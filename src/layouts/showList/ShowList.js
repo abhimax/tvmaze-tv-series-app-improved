@@ -14,7 +14,7 @@ const ShowList = ({ list }) => {
   return (
     <div className={classes["show-list-layout"]}>
       <Row>
-        {list &&
+        {(list.length > 0) ?
           list.map((item) => {
             return (
               <Col md={3} xs={6} align="center" key={item.show.id}>
@@ -27,7 +27,9 @@ const ShowList = ({ list }) => {
                 />
               </Col>
             );
-          })}
+          }): <Col><h2>Sorry! No results found.</h2>
+          <p>Try another word</p>
+          </Col>}
       </Row>
     </div>
   );
