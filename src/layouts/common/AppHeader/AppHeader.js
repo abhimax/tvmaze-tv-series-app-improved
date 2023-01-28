@@ -29,6 +29,10 @@ const AppHeader = () => {
     );
     navigate("/search");
   };
+
+  const handleLogoClick = () => {
+    navigate("/");
+  }
   return (
     <div className={classes["header-wrapper"]}>
       <Row>
@@ -39,7 +43,7 @@ const AppHeader = () => {
           align="left"
           className={classes["image-holder"]}
         >
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} alt="logo" onClick={handleLogoClick}/>
         </Col>
         <Col md={12} lg={8} xlg={9} className={classes["input-holder"]}>
           <SearchInput

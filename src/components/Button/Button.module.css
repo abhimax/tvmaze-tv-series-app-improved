@@ -9,12 +9,15 @@
  height: 50px;
  box-sizing: border-box;
  cursor: pointer;
+;
 }
 
 .content-wrapper{
     display: flex;
     align-items: center;
     font-size: var(--font-size-button);
+    cursor: pointer;
+
 }
 .content-wrapper svg{
     margin-right: 1rem;
@@ -28,4 +31,7 @@
 }
 .full{
     width: unset;
+}
+.button.primary:hover{
+    background-color: var(--color-primary-dark-1);
 }

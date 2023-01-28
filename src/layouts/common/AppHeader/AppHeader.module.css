@@ -1,27 +1,26 @@
 .header-wrapper {
   margin-top: 31px;
 }
-.header-wrapper img {
+.input-holder,
+.image-holder {
+  display: flex;
+  align-items: center;
+}
+.image-holder img {
   height: 80px;
   width: auto;
+  cursor: pointer;
 }
-
 @media (max-width: 1024px) {
   .header-wrapper {
     margin-top: 24px;
-  }
-  .header-wrapper img {
-    height: 50px;
-    margin-bottom: 24px;
   }
   .image-holder {
     justify-content: center;
     display: flex;
   }
-}
-
-.input-holder,
-.image-holder {
-  display: flex;
-  align-items: center;
+  .image-holder img {
+    height: 50px;
+    margin-bottom: 24px;
+  }
 }
