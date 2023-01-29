@@ -11,6 +11,9 @@
   width: auto;
   cursor: pointer;
 }
+.loader-wrapper{
+  margin-top: 2rem;
+}
 @media (max-width: 1024px) {
   .header-wrapper {
     margin-top: 24px;
