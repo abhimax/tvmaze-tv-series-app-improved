@@ -44,11 +44,11 @@ function DetailedPage() {
             className={classes["search-list-column"]}
           >
             <DetailedMainView
-              name={selectedShow.show.name}
-              rating={selectedShow.show.rating}
-              genres={selectedShow.show.genres}
-              summary={selectedShow.show.summary}
-              imagePath={selectedShow.show.image.original}
+              name={selectedShow.show.name ? selectedShow.show.name : 'Not Available'}
+              rating={selectedShow.show.rating ? selectedShow.show.rating : 0}
+              genres={selectedShow.show.genres ? selectedShow.show.genres : []}
+              summary={selectedShow.show.summary ? selectedShow.show.summary : 'Not Available'}
+              imagePath={selectedShow.show.image ? selectedShow.show.image.original : null}
               actorList={cast}
             />
           </Col>

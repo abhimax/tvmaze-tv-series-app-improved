@@ -25,6 +25,7 @@
 .show-card-footer h4 {
   margin-top: 12px;
   margin-bottom: 5px;
+  text-align: left;
 }
 
 @media (max-width: 1024px) {

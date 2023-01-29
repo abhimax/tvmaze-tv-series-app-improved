@@ -31,14 +31,14 @@ const ShowList = ({ list }) => {
     <div className={classes["show-list-layout"]}>
       <Row>
         {(list.length > 0) ?
-          list.map((item) => {
+          list.map((item, index) => {
             return (
               <Col md={3} xs={6} align="center" key={item.show.id}>
                 <ShowCard
-                  id={item.show.id && item.show.id}
-                  name={item.show.name && item.show.name}
-                  rating={item.show.rating && item.show.rating}
-                  image={item.show.image && item.show.image.medium}
+                  id={item.show.id ? item.show.id : index}
+                  name={item.show.name ? item.show.name : 'Not Available'}
+                  rating={item.show.rating ? item.show.rating : 0}
+                  imagePath={item.show.image ? item.show.image.medium : null}
                   onCardClick={handleShowCarClick}
                 />
               </Col>

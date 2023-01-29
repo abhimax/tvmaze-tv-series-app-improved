@@ -4,10 +4,10 @@ const ActorCard = ({ name, character, imagePath }) => {
   return (
     <div className={classes["actor-card-wrapper"]}>
       <Row>
-        <Col md={3} align="left">
+        <Col xs={5} sm={4} md={3} align="left">
           <img src={imagePath} alt={name} />
         </Col>
-        <Col md={9} align="left">
+        <Col xs={7} sm={8} md={9} align="left">
           <h4>{name}</h4>
           <label>as {character}</label>
         </Col>
