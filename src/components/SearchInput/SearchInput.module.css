@@ -23,4 +23,13 @@
     outline: none;
   }
 
+  @media (max-width: 1024px) {
+    .input{
+      height: 50px;
+    }
+    .input input {
+      font-size: var(--font-size-base);
+    }
+  }
+
   

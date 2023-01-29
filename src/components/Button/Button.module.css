@@ -2,14 +2,13 @@
 .button{
  display: flex;
  width: fit-content;
- padding: 0.875rem 1.875rem;
+ padding: 13px 28px;
  align-items: center;
  color: var(--white);
  cursor: pointer;
  height: 50px;
  box-sizing: border-box;
  cursor: pointer;
-;
 }
 
 .content-wrapper{
@@ -17,13 +16,15 @@
     align-items: center;
     font-size: var(--font-size-button);
     cursor: pointer;
-
 }
 .content-wrapper svg{
     margin-right: 1rem;
 }
 .button.secondary{
     background-color:rgba(0, 0, 0, .4)
+}
+.button.secondary:hover{
+    background-color:rgba(0, 0, 0, .7)
 }
 
 .primary{
@@ -34,4 +35,17 @@
 }
 .button.primary:hover{
     background-color: var(--color-primary-dark-1);
+}
+
+@media (max-width: 1024px) {
+    .button{
+        height: 40px;
+        padding: 11px 27px;
+       }
+    .button label {
+      font-size: var(--font-size-m-base);
+    }
+    .button.secondary label{
+        font-size: var(--font-size-base);
+    }
 }
