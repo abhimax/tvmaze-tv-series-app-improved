@@ -1,6 +1,14 @@
+.actor-card-wrapper{
+   margin-bottom: 30px;
+}
 .actor-card-wrapper h4{
    margin: 8px 0 2px 0;
 }
 .actor-card-wrapper label{
    font-size: var(--font-size-small);
 }
+@media (max-width: 768px) {
+   .actor-card-wrapper{
+      margin-bottom: 24px;
+   }
+ }

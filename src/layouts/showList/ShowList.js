@@ -4,10 +4,26 @@ import { useNavigate } from "react-router-dom";
 import { showAction } from "../../store/showSlice";
 import { ShowCard } from "./ShowCard";
 import classes from "./ShowList.module.css";
+import useHttp from "../../hooks/use-http";
+
 const ShowList = ({ list }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const transformCast = (cast) => {
+    console.log('cast ROOT >>>',cast);
+    dispatch(showAction.fetchCast({ selectedCast: cast }));
+  };
+
+  const { isLoading, error: httpError, sendRequest: getCastData } = useHttp();
+
   const handleShowCarClick = (e) => {
+    getCastData(
+      {
+        url: `https://api.tvmaze.com/shows/${e.currentTarget.id.toString()}/cast`,
+      },
+      transformCast
+    );
+
     dispatch(showAction.setSelectedShow({searchedShows: list, selectedId : e.currentTarget.id}));
    navigate('/detailed');
   }

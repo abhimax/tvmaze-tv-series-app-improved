@@ -1,10 +1,10 @@
-import { Col, Container, Row } from "react-grid-system";
+import { Col, Row } from "react-grid-system";
 import CastView from "./CastView/CastView";
 import { DescriptionView } from "./DescriptionView";
 import classes from "./DetailedMainView.module.css";
 const DetailedMainView = ({ name, rating, genres, summary, imagePath, actorList }) => {
-  
   return (
+    
     <div className={classes["detailed-layout"]}>
         <Row >
           <Col  xs={3} className={classes["col-image"]}>

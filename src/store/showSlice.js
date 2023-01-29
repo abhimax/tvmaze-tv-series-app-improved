@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialShowState = {
   searchedShows: [],
-  selectedShow: {}
+  selectedShow: {},
+  selectedCast: [],
 };
 
 const showSlice = createSlice({
@@ -16,6 +17,9 @@ const showSlice = createSlice({
       const searchedShows = action.payload.searchedShows;
       const selectedId = action.payload.selectedId;
       state.selectedShow = searchedShows.find((item) => item.show.id.toString() === selectedId);
+    },
+    fetchCast(state, action) {
+      state.selectedCast = action.payload.selectedCast;
     },
   },
 });

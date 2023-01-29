@@ -8,11 +8,12 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function DetailedPage() {
-  const selectedShow = useSelector(state => state.shows.selectedShow);
+  const selectedShow = useSelector((state) => state.shows.selectedShow);
+  const cast = useSelector((state) => state.shows.selectedCast);
   const navigate = useNavigate();
   const handleBackToSearch = () => {
     navigate("/search");
-  }
+  };
   return (
     <div className={classes["search-container"]}>
       <Container>
@@ -48,20 +49,7 @@ function DetailedPage() {
               genres={selectedShow.show.genres}
               summary={selectedShow.show.summary}
               imagePath={selectedShow.show.image.original}
-              actorList={[
-                {
-                  name: "Jennifer Aniston",
-                  character: "Rachel Green",
-                  image:
-                    "https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg",
-                },
-                {
-                  name: "Matthew",
-                  character: "Chandler",
-                  image:
-                    "https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg",
-                },
-              ]}
+              actorList={cast}
             />
           </Col>
         </Row>
