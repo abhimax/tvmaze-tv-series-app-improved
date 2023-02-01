@@ -1,5 +1,17 @@
 # Tv Series search
+## Features.
++ Search Shows
++ List available Shows based on the filter
++ Show detailed page with cast information
++ move front back with search result
 
+
+## Home view
+![TVMAZE!](readme-res/tvmaze-home.png)
+## Search result view
+![TVMAZE-s!](readme-res/tvmaze-search.png)
+## Show detailed view
+![TVMAZE-d!](readme-res/tvmaze-detailed.png)
 ## Tech stack
 ### React, JavaScript, CSS Modules, Fetch API, Redux, SVG
 
@@ -14,27 +26,9 @@
 - Add react routs and test with dummy data to plan dynamic routs
 - add redux and replace dummy values with real data that fetched from DB
 - set search value based on the search input result
-
-## What I Can improve if I have more time
-- This could be done using typeScript. But It takes considerable time compared to React. But It gives more future benefits.
-- currently show detailed page functions using dummy values. need to get data from API.
-- Error state can be handled. Also found some error triggered with null data from the server. Those fixes could be done.
-- Need to move data fetching and state management into a custom Hook. so that It will be easy to handle API in different modules.
-- There are some style improvements that need to be done. Within a short time It was difficult.
-- Responsiveness could be improved more
-- definitely Test cases can be written. Unit test, structural test can be done. Specially the inbuilt test using react testing lib and jest can expand more. Also better to have an e2e test. but we need to make the above improvements before it.
-- Can add more CSS variables and add theme files and make the project more configurable. So that we can implement the theme easily with the help of the theme engine.
-- React storybooks can be integrated into this project and we can write stories (UI test cases) from atomic components to page levels. Furthermore it supports redux and react routes. so we can test screen flow and UI behaviour with state independently from the backend.
-To save time I didn't use react PropTypes for all components. It would be better if we use them since react with JavaScript is not giving errors in completion like TypeScript.
-- I used JavaScript Fetch API to fetch the data at the moment. It would be easier to handle if we use libraries like axios.
-- We can add the lazy loading feature to improve user experience speed up.
-- Also Next JS always comes with a strong way to overcome react limitation. So if I write this using the next JS we can improve SEO and speedup with the help of server side rendering.
-- Also I could have taken all hard coded strings into a single file and used them to reduce the duplication and make the app more configurable.
-- SASS with CSS variables is more flexible than CSS modules. I used the css module since in the description it mentioned that it is nice to have only CSS.
-- Also I noticed that in the mockup helvetica was the font that was used. It would be great to attach fonts with requirements since we can include them into the asset folder and use font-face as CSS variables.
-- Also It would be great if I use the React router to handle the data fetching part as well. So that we could reduce the usage of lifecycle hooks and use a clean approach to make it. To be honest I didn't have enough knowledge to do so. Thesedays, I'm playing around with them. 
-
-
+- handled errors and loading states
+- used custom hook to fetch data 
+ 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -74,32 +68,44 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## About the task
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The assignment is to create a web application that makes it possible for a user
+to search for information about TV Series using the TV maze API. The TV maze
+API has a public API which can be used for this assignment, and you can find
+information about it here: [https://www.tvmaze.com/api]
+The project should show the search results in a list and allow the user to see
+more information about the show in another view.
+The expected time frame for this assignment is about ~5 hours. Try to limit
+your work to that timeframe and document in a readme file what you would
+have done if you had more time.
+The web application will be judged according to the code readability and
+structure.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Figma Sketches
+Feel free to use the sketches found on the link below as the visual look of the
+web application.
 
-### Code Splitting
+[https://www.figma.com/file/WXw4DO16XTJ0Wknr1l6p6J/Sketch-TV-Maze?node-id=0%3A1&t=LrqxLjAO2Z9Ly6KN-1]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Requirements
+The web application must include the “required” requirements. Add the “Nice to have” requirements if time permits. Before you start, read through the whole list so you get a good understanding on what to build.
 
-### Analyzing the Bundle Size
+### Required
+- The web application should be responsive and work on both mobile and desktop.
+- The web application must work on the latest version of the browsers Chrome, Firefox and Edge.
+- The web application should have two views, one for detailed information and one for search and result.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- The repository of the web application must contain documentation on how to run the application.
+- The web application should be written in JavaScript or TypeScript and in the framework of your choice.
 
-### Making a Progressive Web App
+### Nice to have
+- The web application is written in TypeScript.
+- The web application is written in ReactJS
+- The web application is written without CSS libraries and frameworks.
+- The web application should give the end user feedback concerning errors or when the connection to the API is slow. For example, when they have a slow internet connection.
+- The web application should have routing set up in such way that the end users can send direct links to detailed information about a certain TV show.
+- The project should have tests.
+- If time permits, feel free to add what you think is missing from the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
