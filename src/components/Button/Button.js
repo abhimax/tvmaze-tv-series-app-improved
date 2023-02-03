@@ -2,7 +2,7 @@ import classes from "./Button.module.css";
 import PropTypes from "prop-types";
 const Button = ({ label, icon, darkMode, onClick, fitContent, ...props }) => {
   return (
-    <div
+    <button
       onClick={onClick}
       className={`${classes.button} ${
         darkMode ? classes.secondary : classes.primary
@@ -12,7 +12,7 @@ const Button = ({ label, icon, darkMode, onClick, fitContent, ...props }) => {
         {icon}
         {label}
       </label>
-    </div>
+    </button>
   );
 };
 Button.propTypes = {

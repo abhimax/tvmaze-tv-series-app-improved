@@ -9,6 +9,7 @@
  height: 50px;
  box-sizing: border-box;
  cursor: pointer;
+ border: none;
 }
 
 .content-wrapper{
@@ -31,7 +32,7 @@
     background-color: var(--color-primary);
 }
 .full{
-    width: unset;
+    width: 100%;
 }
 .button.primary:hover{
     background-color: var(--color-primary-dark-1);
