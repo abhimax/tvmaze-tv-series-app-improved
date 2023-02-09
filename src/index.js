@@ -14,7 +14,7 @@ import store from './store';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/tvmaze-tv-series-app-improved",
     element: <App />,
   },
   {

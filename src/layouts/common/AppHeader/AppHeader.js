@@ -35,7 +35,7 @@ const AppHeader = () => {
   };
 
   const handleLogoClick = () => {
-    navigate("/");
+    navigate("/tvmaze-tv-series-app-improved");
   };
 
   const loadingContent = (
