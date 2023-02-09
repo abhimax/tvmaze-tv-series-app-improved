@@ -34,6 +34,21 @@ const AppHeader = () => {
     navigate("/search");
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      if (event.target.value === "") {
+        return;
+      }
+      getShowsData(
+        {
+          url: `https://api.tvmaze.com/search/shows?q=${event.target.value}`,
+        },
+        transformShows
+      );
+      navigate("/search");
+    }
+  };
+
   const handleLogoClick = () => {
     navigate("/tvmaze-tv-series-app-improved");
   };
@@ -70,6 +85,7 @@ const AppHeader = () => {
             placeholder="Search for TV shows"
             onSearchClick={handleSearch}
             inputRef={SearchInputRef}
+            onKeyDown={handleKeyDown}
           />
         </Col>
         {isLoading && loadingContent}

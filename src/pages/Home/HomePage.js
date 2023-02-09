@@ -21,7 +21,6 @@ function HomePage() {
   };
 
   const { isLoading, error: httpError, sendRequest: getShowsData } = useHttp();
-
   const handleSearch = () => {
     if(SearchInputRef.current.value === ''){
       return;
@@ -32,6 +31,21 @@ function HomePage() {
       },
       transformShows
     );
+  };
+
+  const handleKeyDown = (event) => {
+    
+    if (event.key === 'Enter') {
+      if (event.target.value === "") {
+        return;
+      }
+      getShowsData(
+        {
+          url: `https://api.tvmaze.com/search/shows?q=${event.target.value}`,
+        },
+        transformShows
+      );
+    }
   };
 
   const errorContent = (
@@ -74,6 +88,7 @@ function HomePage() {
             onSearchClick={handleSearch}
             inputRef={SearchInputRef}
             placeholder="Search for TV shows"
+            onKeyDown={handleKeyDown}
           />
         </div>
       </Col>
