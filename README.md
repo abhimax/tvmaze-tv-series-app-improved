@@ -1,6 +1,5 @@
 # Tv Series search
-## [https://abhimax.github.io/tvmaze-tv-series-app-improved/]
-## [ click here ](https://github.com/facebook/create-react-app)
+## [ click here ](https://github.com/facebook/create-react-app) to view the app
 
 ## Features.
 + Search Shows
