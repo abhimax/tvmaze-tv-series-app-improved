@@ -6,7 +6,7 @@
     box-sizing: border-box;
     height: fit-content;
     height: 62px;
-    padding: 6px 6px 6px 18px;
+    padding: 6px;
 
   }
   
@@ -14,6 +14,7 @@
     display: flex;
     flex: 1 1 100%;
     border: none;
+    padding-left: 10px;
     font-size: 1.25rem;
     line-height: 23px;
     padding-left: 0.1.125rem;
@@ -29,6 +30,15 @@
     }
     .input input {
       font-size: var(--font-size-base);
+    }
+  }
+
+  @media (max-width: 420px) {
+    .input{
+      height: 50px;
+    }
+    .input input {
+      font-size: var(--font-size-small);
     }
   }
 

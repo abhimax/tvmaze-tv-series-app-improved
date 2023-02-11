@@ -50,3 +50,16 @@
         font-size: var(--font-size-base);
     }
 }
+
+@media (max-width: 420px) {
+    .button{
+        height: 36px;
+        padding: 6px 18px;
+       }
+    .button label {
+      font-size: var(--font-size-small);
+    }
+    .button.secondary label{
+        font-size: var(--font-size-small);
+    }
+}
