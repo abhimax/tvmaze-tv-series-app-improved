@@ -16,3 +16,10 @@
     margin-bottom: 83px;
   }
 }
+
+@media (max-width: 420px) {
+  .home-container img {
+    margin-bottom: 83px;
+    width: 75%;
+  }
+}
