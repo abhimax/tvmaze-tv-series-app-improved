@@ -6,8 +6,7 @@
     box-sizing: border-box;
     height: fit-content;
     height: 62px;
-    padding: 6px;
-
+    padding: 6px 6px 6px 12px;
   }
   
   .input input {
