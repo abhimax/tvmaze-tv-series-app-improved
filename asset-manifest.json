@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/tvmaze-tv-series-app-improved/static/css/main.27abb357.css",
-    "main.js": "/tvmaze-tv-series-app-improved/static/js/main.b57d0b55.js",
+    "main.js": "/tvmaze-tv-series-app-improved/static/js/main.2896a561.js",
     "static/js/787.e7145171.chunk.js": "/tvmaze-tv-series-app-improved/static/js/787.e7145171.chunk.js",
     "static/media/null-treatment-img.png": "/tvmaze-tv-series-app-improved/static/media/null-treatment-img.4d1dba3d8f0a3d9f693e.png",
     "static/media/tvmaze-logo.svg": "/tvmaze-tv-series-app-improved/static/media/tvmaze-logo.9d1d1d6b4f26521e421b208e03ab6a58.svg",
     "static/media/female-avatar.png": "/tvmaze-tv-series-app-improved/static/media/female-avatar.9ffb65091d35ad9da8e3.png",
     "index.html": "/tvmaze-tv-series-app-improved/index.html",
     "main.27abb357.css.map": "/tvmaze-tv-series-app-improved/static/css/main.27abb357.css.map",
-    "main.b57d0b55.js.map": "/tvmaze-tv-series-app-improved/static/js/main.b57d0b55.js.map",
+    "main.2896a561.js.map": "/tvmaze-tv-series-app-improved/static/js/main.2896a561.js.map",
     "787.e7145171.chunk.js.map": "/tvmaze-tv-series-app-improved/static/js/787.e7145171.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27abb357.css",
-    "static/js/main.b57d0b55.js"
+    "static/js/main.2896a561.js"
   ]
 }
