@@ -3,7 +3,7 @@ import classes from "./ShowCard.module.css";
 import nullTreatmentImg from "../../../../src/assets/images/null-treatment-img.png";
 const ShowCard = ({ name, rating, imagePath, onCardClick, id }) => {
   return (
-    <div className={classes["show-card-wrapper"]} id={id} onClick={onCardClick}>
+    <div className={classes["show-card-wrapper"]} onClick={onCardClick}>
       <div
         className={classes["show-card-image"]}
         style={{ backgroundImage: `url(${imagePath ? imagePath: nullTreatmentImg })` }}

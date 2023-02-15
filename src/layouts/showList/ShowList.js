@@ -17,10 +17,10 @@ const ShowList = ({ list }) => {
 
   const { isLoading, error: httpError, sendRequest: getCastData } = useHttp();
 
-  const handleShowCarClick = (e) => {
+  const handleShowCarClick = (id) => {
     getCastData(
       {
-        url: `https://api.tvmaze.com/shows/${e.currentTarget.id.toString()}/cast`,
+        url: `https://api.tvmaze.com/shows/${id.toString()}/cast`,
       },
       transformCast
     );
@@ -28,7 +28,7 @@ const ShowList = ({ list }) => {
     dispatch(
       showAction.setSelectedShow({
         searchedShows: list,
-        selectedId: e.currentTarget.id,
+        selectedId: id.toString(),
       })
     );
     navigate("/detailed");
@@ -41,11 +41,10 @@ const ShowList = ({ list }) => {
           return (
             <Col md={3} xs={6} align="center" key={item.show.id}>
               <ShowCard
-                id={item.show.id ? item.show.id : index}
                 name={item.show.name ? item.show.name : "Not Available"}
                 rating={item.show.rating ? item.show.rating : 0}
                 imagePath={item.show.image ? item.show.image.medium : null}
-                onCardClick={handleShowCarClick}
+                onCardClick={handleShowCarClick.bind(null,item.show.id)}
               />
             </Col>
           );
